@@ -1,66 +1,99 @@
+import StarIcon from '@mui/icons-material/Star';
 import {
   Box,
-  BoxProps,
   Button,
   Card,
   CardActions,
   CardContent,
   Container,
   Grid,
+  Icon,
+  List,
+  ListItem,
+  ListItemIcon,
   Stack,
+  Typography,
 } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
-
-function Item(props: BoxProps) {
-  const { sx, ...other } = props;
-  return (
-    <Box
-      sx={{
-        display: 'inline',
-        fontWeight: 'bold',
-        ...sx,
-      }}
-      {...other}
-    />
-  );
-}
+import SvgIconStyle from './components/SvgIconStyle';
 
 export default function App() {
   const navigate = useNavigate();
+  const theme = useTheme();
 
   return (
     <Container maxWidth='md'>
-      <Grid container spacing={3} sx={{ p: 4 }}>
-        <Grid item xs={12} md={4}>
-          <div>
-            <Card sx={{ px: 2, py: 1 }}>
-              <Item sx={{ fontSize: 48 }}>P</Item>
-              <Item sx={{ fontSize: 32 }}>roactive</Item>
-            </Card>
-          </div>
+      <Typography color='primary' variant='h3' align='center' sx={{ mt: 4 }}>
+        Rob Slaughter 4 Commissioner
+      </Typography>
+      <Grid container spacing={3} sx={{ pt: 4 }}>
+        <Grid item xs={12} sm={4}>
+          <Card
+            sx={{
+              backgroundColor: theme.palette.secondary.main,
+              font: { color: 'white' },
+              px: 2,
+              py: 1,
+            }}
+          >
+            <Typography
+              color={theme.palette.info.main}
+              align='center'
+              sx={{ fontSize: 24, font: { color: 'white' } }}
+            >
+              Positive
+            </Typography>
+          </Card>
         </Grid>
 
-        <Grid item xs={12} md={4}>
-          <div>
-            <Card sx={{ px: 2, py: 1 }}>
-              <Item sx={{ fontSize: 48 }}>P</Item>
-              <Item sx={{ fontSize: 32 }}>ositive</Item>
-            </Card>
-          </div>
+        <Grid item xs={12} sm={4}>
+          <Card
+            sx={{
+              backgroundColor: theme.palette.primary.main,
+              font: { color: 'white' },
+              px: 2,
+              py: 1,
+            }}
+          >
+            <Typography
+              color={theme.palette.info.main}
+              align='center'
+              sx={{ fontSize: 24, font: { color: 'white' } }}
+            >
+              Proactive
+            </Typography>
+          </Card>
         </Grid>
 
-        <Grid item xs={12} md={4}>
-          <div>
-            <Card sx={{ px: 2, py: 1 }}>
-              <Item sx={{ fontSize: 48 }}>L</Item>
-              <Item sx={{ fontSize: 32 }}>eadership</Item>
-            </Card>
-          </div>
+        <Grid item xs={12} sm={4}>
+          <Card
+            sx={{
+              backgroundColor: theme.palette.secondary.main,
+              font: { color: 'white' },
+              px: 2,
+              py: 1,
+            }}
+          >
+            <Typography
+              color={theme.palette.info.main}
+              align='center'
+              sx={{ fontSize: 24, font: { color: 'white' } }}
+            >
+              Leadership
+            </Typography>
+          </Card>
         </Grid>
         <Grid item xs={12} md={12} lg={12} xl={12}>
           <Box sx={{ minWidth: 275 }}></Box>
         </Grid>
       </Grid>
+      <Typography color='primary' variant='h4' align='center'>
+        <Icon color='primary'>
+          <SvgIconStyle src={`/icons/republican.svg`} />
+        </Icon>{' '}
+        Republican Candidate for County Commissioner
+      </Typography>
       <Stack>
         <Card variant='outlined' sx={{ m: 2 }}>
           <CardContent>
@@ -76,33 +109,73 @@ export default function App() {
               I have a skill set that is tailor-made to provide this leadership.
             </p>
 
-            <ul>
-              <li>Sweetwater county Native </li>
-              <li>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <StarIcon color='primary' />
+                </ListItemIcon>
+                Sweetwater county Native
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <StarIcon color='secondary' />
+                </ListItemIcon>
                 Understand and have been a part of the local nature and culture
                 of Sweetwater County my entire life
-              </li>
-              <li>
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <StarIcon color='primary' />
+                </ListItemIcon>
                 34 years of experience with local government leadership and
                 interaction
-              </li>
-              <li>
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <StarIcon color='secondary' />
+                </ListItemIcon>
                 Full knowledge of the County budget and where the County’s
                 revenues are derived and major expenditures occur
-              </li>
-              <li>Willing to make tough decisions, in a timely manner</li>
-              <li>
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <StarIcon color='primary' />
+                </ListItemIcon>
+                Willing to make tough decisions, in a timely manner
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <StarIcon color='secondary' />
+                </ListItemIcon>
                 Understand the importance of relationships with other local and
                 municipal leaders
-              </li>
-              <li>
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <StarIcon color='primary' />
+                </ListItemIcon>
                 Have strong existing relationships with State and local leaders
-                and other in our community
-              </li>
-              <li>Seek transparency and better communications on all levels</li>
-              <li>Vast Mineral tax and motor vehicle expertise</li>
-              <li>Desire to see Sweetwater County Thrive</li>
-            </ul>
+                and other local leaders in our community
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <StarIcon color='secondary' />
+                </ListItemIcon>
+                Seek transparency and better communications on all levels
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <StarIcon color='primary' />
+                </ListItemIcon>
+                Vast Mineral tax and motor vehicle expertise
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <StarIcon color='secondary' />
+                </ListItemIcon>
+                Desire to see Sweetwater County Thrive
+              </ListItem>
+            </List>
           </CardContent>
           <CardActions>
             <Button size='small' onClick={() => navigate('/values')}>

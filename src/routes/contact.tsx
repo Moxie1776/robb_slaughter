@@ -1,38 +1,10 @@
 import EmailIcon from '@mui/icons-material/Email';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
-import {
-  Box,
-  BoxProps,
-  Container,
-  Icon,
-  Link,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { Container, Icon, Link, Stack, Typography } from '@mui/material';
+import SvgIconStyle from '../components/SvgIconStyle';
 
 // ----------------------------------------------------------------------
-
-interface Props extends BoxProps {
-  src: string;
-}
-
-const SvgIconStyle = ({ src, sx }: Props) => {
-  return (
-    <Box
-      component='span'
-      sx={{
-        width: 32,
-        height: 32,
-        display: 'inline-block',
-        bgcolor: 'currentColor',
-        mask: `url(${src}) no-repeat center / contain`,
-        WebkitMask: `url(${src}) no-repeat center / contain`,
-        ...sx,
-      }}
-    />
-  );
-};
 
 export default function Contact() {
   return (
@@ -41,7 +13,7 @@ export default function Contact() {
         <Typography mb={2} variant='h4' component='h2' sx={{ my: 4 }}>
           Contact Information
         </Typography>
-        <EmailIcon color='secondary' />
+        <EmailIcon color='primary' />
         <Link
           underline='none'
           href='mailto:robbslaughter@yahoo.com'
@@ -49,7 +21,7 @@ export default function Contact() {
         >
           robbslaughter@yahoo.com
         </Link>
-        <FacebookIcon color='info' />{' '}
+        <FacebookIcon color='secondary' />{' '}
         <Link
           underline='none'
           target='_blank'
@@ -58,11 +30,11 @@ export default function Contact() {
         >
           Facebook - Robb Slaughter 4 commissioner
         </Link>
-        <PhoneAndroidIcon color='secondary' />
+        <PhoneAndroidIcon color='primary' />
         <Typography mb={2} mt={1}>
           Cell Phone - 307-371-4324
         </Typography>
-        <Icon color='info'>
+        <Icon color='secondary'>
           <SvgIconStyle src={`/icons/venmo.svg`} />
         </Icon>
         <Link

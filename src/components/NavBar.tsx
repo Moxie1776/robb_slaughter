@@ -23,7 +23,7 @@ export default function ProminentAppBar() {
     <Box>
       <AppBar position='static'>
         <Image
-          src='/images/navBgFh.png'
+          src='/images/boarsTusk.png'
           duration={500}
           fit='contain'
           style={{
