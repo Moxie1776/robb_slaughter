@@ -88,7 +88,7 @@ export default function App() {
           <Box sx={{ minWidth: 275 }}></Box>
         </Grid>
       </Grid>
-      <Typography color='primary' variant='h4' align='center'>
+      <Typography color='primary' variant='h5' align='center'>
         <Icon color='primary'>
           <SvgIconStyle src={`/icons/republican.svg`} />
         </Icon>{' '}
