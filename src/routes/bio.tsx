@@ -1,4 +1,11 @@
-import { Button, Container, Paper, Stack } from '@mui/material';
+import {
+  Button,
+  Container,
+  Grid,
+  Paper,
+  Stack,
+  Typography,
+} from '@mui/material';
 import Image from 'mui-image';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,15 +16,28 @@ export default function Bio() {
     <Container maxWidth='md'>
       <Stack>
         <Paper sx={{ m: 3, p: 3 }}>
-          <h2>
+          <Typography color='primary' variant='h4' align='left'>
             Mini Biography
-            <Image
-              height={200}
-              duration={500}
-              width={200}
-              src='/images/robb.jpeg'
-            />
-          </h2>
+          </Typography>
+
+          <Grid container spacing={3} sx={{ pt: 4 }}>
+            <Grid item xs={12} sm={4}>
+              <Image
+                // height={200}
+                duration={500}
+                // width={200}
+                src='/images/robb.jpeg'
+              />
+            </Grid>
+            <Grid item xs={12} sm={8}>
+              <Image
+                // height={200}
+                duration={500}
+                // width={200}
+                src='/images/pilotButte.png'
+              />
+            </Grid>
+          </Grid>
           <p>
             Robb is a Sweetwater County Native, born in Rock Springs, Wyoming.
             His early life was spent learning the value of hard work and family
@@ -59,7 +79,7 @@ export default function Bio() {
           </p>
           <Button
             size='small'
-            onClick={() => navigate('/contact')}
+            onClick={() => navigate('/endorsments')}
             sx={{ justifyContent: 'start' }}
           >
             Learn More

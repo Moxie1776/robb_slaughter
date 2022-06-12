@@ -6,6 +6,7 @@ import App from './App';
 import NavBar from './components/NavBar';
 import Bio from './routes/bio';
 import Contact from './routes/contact';
+import Endorsments from './routes/endorsments';
 import Values from './routes/values';
 import theme from './theme';
 
@@ -23,6 +24,7 @@ root.render(
         <Route path='/' element={<App />} />
         <Route path='/values' element={<Values />} />
         <Route path='bio' element={<Bio />} />
+        <Route path='endorsments' element={<Endorsments />} />
         <Route path='contact' element={<Contact />} />
       </Routes>
     </BrowserRouter>

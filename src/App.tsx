@@ -25,7 +25,7 @@ export default function App() {
   return (
     <Container maxWidth='md'>
       <Typography color='primary' variant='h3' align='center' sx={{ mt: 4 }}>
-        Rob Slaughter 4 Commissioner
+        Robb Slaughter 4 Commissioner
       </Typography>
       <Grid container spacing={3} sx={{ pt: 4 }}>
         <Grid item xs={12} sm={4}>
