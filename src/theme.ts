@@ -15,6 +15,11 @@ const theme = createTheme({
     info: {
       main: '#FFFFFF',
     },
+    success: {
+      dark: '#1fc500',
+      main: '#39ff14',
+      light: '#5aff3b',
+    },
   },
 });
 

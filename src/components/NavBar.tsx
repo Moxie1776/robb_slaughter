@@ -61,13 +61,13 @@ const ProminentAppBar: React.FC = () => {
               aria-expanded={open ? 'true' : undefined}
               onClick={handleClick}
             >
-              <MenuIcon color='primary' />
+              <MenuIcon color='error' />
             </IconButton>
           )}
           {!!matches && (
             <>
               <Button
-                color='primary'
+                color='error'
                 size={matches ? 'large' : 'small'}
                 variant='text'
                 onClick={() => navigate('/')}
@@ -75,7 +75,7 @@ const ProminentAppBar: React.FC = () => {
                 Home
               </Button>
               <Button
-                color='primary'
+                color='error'
                 size={matches ? 'large' : 'small'}
                 variant='text'
                 onClick={() => navigate('/values')}
@@ -83,7 +83,7 @@ const ProminentAppBar: React.FC = () => {
                 Values
               </Button>
               <Button
-                color='primary'
+                color='error'
                 size={matches ? 'large' : 'small'}
                 variant='text'
                 onClick={() => navigate('/bio')}
@@ -91,7 +91,7 @@ const ProminentAppBar: React.FC = () => {
                 Bio
               </Button>
               <Button
-                color='primary'
+                color='error'
                 size={matches ? 'large' : 'small'}
                 variant='text'
                 onClick={() => navigate('/endorsments')}
@@ -99,7 +99,7 @@ const ProminentAppBar: React.FC = () => {
                 Endorsments
               </Button>
               <Button
-                color='primary'
+                color='error'
                 size={matches ? 'large' : 'small'}
                 variant='text'
                 onClick={() => navigate('/contact')}
